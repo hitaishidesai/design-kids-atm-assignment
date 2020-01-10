@@ -1,0 +1,119 @@
+// @app-font: "Bubblegum_Sans";
+
+// body {
+//   font-family: @app-font;
+// }
+
+.u-margin(100);
+.u-margin(@n, @i:0) when (@i =< @n) {
+  .u-margin-@{i} {
+    margin: @i + 0px;
+  }
+  .u-margin(@n, (@i + 1));
+}
+
+.u-margin-left(50);
+.u-margin-left(@n, @i:0) when (@i =< @n) {
+  .u-margin-left-@{i} {
+    margin-left: @i + 0px;
+  }
+  .u-margin-left(@n, (@i + 1));
+}
+
+.u-margin-right(50);
+.u-margin-right(@n, @i:0) when (@i =< @n) {
+  .u-margin-right-@{i} {
+    margin-right: @i + 0px;
+  }
+  .u-margin-right(@n, (@i + 1));
+}
+.u-margin-top(50);
+.u-margin-top(@n, @i:-10) when (@i =< @n) {
+  .u-margin-top-@{i} {
+    margin-top: @i + 0px;
+  }
+  .u-margin-top(@n, (@i + 1));
+}
+.u-margin-bottom(50);
+.u-margin-bottom(@n, @i:0) when (@i =< @n) {
+  .u-margin-bottom-@{i} {
+    margin-bottom: @i + 0px;
+  }
+  .u-margin-bottom(@n, (@i + 1));
+}
+
+// padding
+
+.u-padding(100);
+.u-padding(@n, @i:0) when (@i =< @n) {
+  .u-padding-@{i} {
+    padding: @i + 0px;
+  }
+  .u-padding(@n, (@i + 1));
+}
+
+.u-padding-left(50);
+.u-padding-left(@n, @i:0) when (@i =< @n) {
+  .u-padding-left-@{i} {
+    padding-left: @i + 0px;
+  }
+  .u-padding-left(@n, (@i + 1));
+}
+
+.u-padding-right(50);
+.u-padding-right(@n, @i:0) when (@i =< @n) {
+  .u-padding-right-@{i} {
+    padding-right: @i + 0px;
+  }
+  .u-padding-right(@n, (@i + 1));
+}
+.u-padding-top(50);
+.u-padding-top(@n, @i:-10) when (@i =< @n) {
+  .u-padding-top-@{i} {
+    padding-top: @i + 0px;
+  }
+  .u-padding-top(@n, (@i + 1));
+}
+.u-padding-bottom(50);
+.u-padding-bottom(@n, @i:0) when (@i =< @n) {
+  .u-padding-bottom-@{i} {
+    padding-bottom: @i + 0px;
+  }
+  .u-padding-bottom(@n, (@i + 1));
+}
+
+@border-radius-2: 2px;
+@border-radius-3: 3px;
+@border-radius-4: 4px;
+@border-radius-5: 5px;
+@border-radius-10: 10px;
+@border-radius-cir: 50%;
+
+.u-border-radius-2 {
+  border-radius: @border-radius-2;
+}
+.u-border-radius-3 {
+  border-radius: @border-radius-3;
+}
+.u-border-radius-4 {
+  border-radius: @border-radius-4;
+}
+.u-border-radius-5 {
+  border-radius: @border-radius-5;
+}
+.u-border-radius-10 {
+  border-radius: @border-radius-10;
+}
+.u-border-radius-cir {
+  border-radius: @border-radius-cir;
+}
+
+//--------------font-------------
+
+.u-font-size(70);
+.u-font-size(@n, @i:12) when (@i =< @n) {
+  .u-font-size-@{i} {
+    font-size: @i + 0px;
+  }
+  .u-font-size(@n, (@i+2));
+}

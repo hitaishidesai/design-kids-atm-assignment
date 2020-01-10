@@ -1,0 +1,29 @@
+/* .c-card-square
+{
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  font-weight: bold;
+  color: #f17a7a;
+} */
+.mat-fab:not([class*="mat-elevation-z"]),
+.mat-mini-fab:not([class*="mat-elevation-z"]) {
+  box-shadow: none;
+}
+:host /deep/ .mat-fab {
+  width: 90px;
+  height: 90px;
+  font-size: 28px;
+  background-color: #db452c;
+  box-shadow: 6px 6px 6px 1px rgba(255, 255, 255, 1);
+}
+:host /deep/ .mat-form-field-infix {
+  border: none;
+  width: auto;
+}
+:host /deep/ .mat-form-field-underline {
+  display: none;
+}
+:host /deep/ .mat-raised-button {
+  border-radius: 10px;
+}

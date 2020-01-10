@@ -1,0 +1,53 @@
+<div class="l-libris-card-dialog">
+  <div fxLayout="row"
+       class="c-form-heading u-padding-20 ">
+    <div fxFlex="23"
+         fxLayout="row"
+         class="u-padding-top-5"
+         (click)="previousPage()"
+         (click)="previousPage()">
+      <div class="u-icon-back">
+        <mat-icon fxFlex="15"
+                  class="align-left clear u-color-text-white">arrow_back_ios</mat-icon>
+      </div>
+      <div fxFlex
+           class="u-font-size-30 u-color-text-white">Actions</div>
+    </div>
+    <!-- <h3 fxFlex="54"
+        class="align-center u-margin-0 u-color-text-white u-font-size-30"> Check Account Balance </h3> -->
+  </div>
+  <hr class="u-margin-0">
+  <div class="c-form-content u-color-text-grey-light u-padding-20 u-font-size-36">
+
+    <div fxLayout="column"
+         fxLayoutGap="30px"
+         fxLayoutAlign="center center">
+      <div fxFlex>You withdrew</div>
+      <div fxLayout="row wrap"
+           fxLayoutALign="center center"
+           fxLayoutGap="5px"
+           fxLayout.xs="column"
+           class="u-margin-top-5">
+
+        <div class="align-center u-font-size-50 u-color-text-green"> {{displayValue}} !</div>
+
+
+      </div>
+      <div fxFlex>Please collect your money
+      </div>
+      <div fxFlex
+           class="u-color-text-green u-icon-large">
+        <mat-icon>arrow_downward</mat-icon>
+      </div>
+      <!-- <div fxLayout="row wrap"
+           fxLayoutALign="center center"
+           fxLayoutGap="5px"
+           fxLayout.xs="column"
+           class="u-margin-top-5">
+        <button mat-raised-button
+                class="custom-button"
+                (click)="onCancel()">OK</button>
+    </div> -->
+    </div>
+  </div>
+</div>

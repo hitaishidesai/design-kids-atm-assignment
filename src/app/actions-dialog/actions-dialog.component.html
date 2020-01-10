@@ -1,0 +1,63 @@
+<div class="l-libris-card-dialog">
+  <div fxLayout="row"
+       class=" c-form-heading u-padding-20">
+    <div fxFlex="23"
+         fxLayout="row"
+         (click)="previousPage()">
+      <div class="u-icon-back">
+        <mat-icon fxFlex="15"
+                  class="align-left clear">arrow_back_ios</mat-icon>
+      </div>
+      <div fxFlex
+           class="u-font-size-30 u-color-text-white">Enter PIN</div>
+    </div>
+    <!-- <h3 fxFlex="54"
+        class="align-center u-margin-0 u-color-text-white u-font-size-34"> Select an Action
+    </h3> -->
+  </div>
+  <hr class="u-margin-0">
+  <div class="c-form-content u-color-text-grey-light u-padding-30 u-font-size-36">
+
+    <div fxLayout="column"
+         fxLayoutGap="30px"
+         fxLayoutAlign="center center">
+      <div fxFlex>Great! What would you like to do?</div>
+
+      <div fxLayout="row wrap"
+           fxLayoutGap="30px"
+           fxLayoutAlign="center center">
+        <div fxFlex>
+          <button mat-raised-button
+                  (click)="openWithdrawDialog()"
+                  class="u-color-text-white custom-action-button-dark">WITHDRAW MONEY</button>
+        </div>
+        <div fxFlex>
+          <button mat-raised-button
+                  (click)="openDepositDialog()"
+                  class="u-color-text-white custom-action-button-dark">DEPOSIT CASH</button>
+        </div>
+        <div fxFlex>
+          <button mat-raised-button
+                  (click)="openDisplayBalanceDialog()"
+                  class="
+                  u-color-text-white
+                  custom-action-button-dark">CHECK BALANCE</button>
+        </div>
+
+      </div>
+
+
+      <div fxLayout="row wrap"
+           fxLayoutALign="center center"
+           fxLayoutGap="5px"
+           fxLayout.xs="column"
+           class="u-margin-top-5">
+        <button mat-raised-button
+                class="custom-button"
+                (click)="onCancel()">CANCEL</button>
+
+
+      </div>
+    </div>
+  </div>
+</div>

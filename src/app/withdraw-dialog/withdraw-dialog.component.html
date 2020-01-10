@@ -1,0 +1,86 @@
+<div class="l-libris-card-dialog">
+  <div fxLayout="row"
+       class="c-form-heading u-padding-20 ">
+    <div fxFlex="23"
+         fxLayout="row"
+         class="u-padding-top-5"
+         (click)="previousPage()">
+      <div class="u-icon-back">
+        <mat-icon fxFlex="15"
+                  class="align-left clear">arrow_back_ios</mat-icon>
+      </div>
+      <div fxFlex
+           class="u-font-size-30 u-color-text-white">Actions</div>
+    </div>
+    <!-- <h3 fxFlex="54"
+        class="align-center u-margin-0 u-font-size-30 u-color-text-white"> Withdrawal </h3> -->
+  </div>
+  <hr class="u-margin-0">
+  <div class="c-form-content  u-color-text-grey-light u-padding-20 u-font-size-36">
+
+    <div fxLayout="column"
+         fxLayoutGap="30px"
+         fxLayoutAlign="center center">
+      <div fxFlex>How much money do you want to withdraw?</div>
+      <div fxLayout="row wrap"
+           fxLayoutALign="center center"
+           fxLayoutGap="5px"
+           class="u-margin-top-5">
+        <mat-card class="c-card">
+          <mat-form-field>
+            <input matInput
+                   class="align-right"
+                   disabled="{{inputDisabled}}"
+                   value="{{inputValue}}">
+          </mat-form-field>
+        </mat-card>
+
+      </div>
+
+      <div fxLayout="row wrap"
+           fxLayoutGap="30px"
+           fxLayoutAlign="center center">
+        <div fxFlex>
+          <button mat-raised-button
+                  class="custom-withdraw-button-dark u-color-text-white"
+                  (click)="onclick1()">$ 1</button>
+        </div>
+        <div fxFlex>
+          <button mat-raised-button
+                  class="custom-withdraw-button-dark u-color-text-white"
+                  (click)="onclick5()">$ 5</button>
+        </div>
+
+      </div>
+
+      <div fxLayout="row wrap"
+           fxLayoutGap="30px"
+           fxLayoutAlign="center center">
+        <div fxFlex>
+          <button mat-raised-button
+                  class="custom-withdraw-button-dark u-color-text-white"
+                  (click)="onclick10()">$ 10</button>
+        </div>
+        <div fxFlex>
+          <button mat-raised-button
+                  class="custom-withdraw-button-dark u-color-text-white"
+                  (click)="onclick15()">$ 15</button>
+        </div>
+
+      </div>
+
+
+      <div fxLayout="row wrap"
+           fxLayoutALign="center center"
+           fxLayoutGap="5px"
+           fxLayout.xs="column"
+           class="u-margin-top-5">
+        <button mat-raised-button
+                class="custom-button"
+                (click)="openConfirmationDialog()">OK</button>
+
+
+      </div>
+    </div>
+  </div>
+</div>

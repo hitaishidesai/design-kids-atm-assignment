@@ -1,0 +1,10 @@
+:host /deep/ .mat-form-field-infix {
+  border: none;
+  width: auto;
+}
+:host /deep/ .mat-form-field-underline {
+  display: none;
+}
+:host /deep/ .mat-raised-button {
+  border-radius: 10px;
+}

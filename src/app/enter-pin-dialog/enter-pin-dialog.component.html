@@ -1,0 +1,132 @@
+<div class="l-libris-card-dialog">
+  <div fxLayout="row"
+       class="c-form-heading u-padding-20 ">
+    <div fxFlex="23"
+         fxLayout="row"
+         class="u-padding-top-5"
+         (click)="closeDialog()">
+      <div class="u-icon-back">
+        <mat-icon fxFlex="15"
+                  class="align-left clear">arrow_back_ios</mat-icon>
+      </div>
+      <div fxFlex
+           class="u-font-size-30 u-color-text-white">Home</div>
+    </div>
+    <!-- <h3 fxFlex="54"
+        class="align-center u-margin-0 u-color-text-white u-font-size-30"> Enter PIN </h3> -->
+  </div>
+  <hr class="u-margin-0">
+  <div class="c-form-content u-color-text-white u-padding-20 u-font-size-36">
+
+    <div fxLayout="column"
+         fxLayoutGap="30px"
+         fxLayoutAlign="center center">
+      <div fxFlex> What is your PIN ?</div>
+      <div fxLayout="row wrap"
+           fxLayoutGap="4px">
+        <div fxFlex="23">
+          <mat-card class="c-card-square">
+            <div class="vertical-center">{{pin.length>0 ? inputValue: ''}}</div>
+          </mat-card>
+        </div>
+        <div fxFlex="23">
+          <mat-card class="c-card-square">
+            <div class="vertical-center">{{pin.length>1 ? inputValue: ''}}</div>
+          </mat-card>
+        </div>
+        <div fxFlex="23">
+          <mat-card class="c-card-square">
+            <div class="vertical-center"> {{pin.length>2 ? inputValue: ''}} </div>
+          </mat-card>
+        </div>
+        <div fxFlex="23">
+          <mat-card class="c-card-square">
+            <div class="vertical-center">{{pin.length>3 ? inputValue: ''}}</div>
+          </mat-card>
+        </div>
+      </div>
+
+      <div fxLayout="column"
+           fxLayoutGap="8px"
+           class="u-background-opacity"
+           fxLayoutAlign="center center">
+        <div fxLayout="row wrap"
+             fxLayoutGap="8px">
+          <div> <button color="primary"
+                    (click)='updatePin(1)'
+                    class="u-color-text-white"
+                    mat-fab>1</button></div>
+          <div> <button color="primary"
+                    (click)='updatePin(2)'
+                    class=" u-color-text-white"
+                    mat-fab>2</button></div>
+          <div>
+            <button color="primary"
+                    (click)='updatePin(3)'
+                    class="u-color-text-white"
+                    mat-fab>3</button>
+          </div>
+        </div>
+        <div fxLayout="row wrap"
+             fxLayoutGap="8px">
+          <div> <button color="primary"
+                    class="u-color-text-white"
+                    (click)='updatePin(4)'
+                    mat-fab>4</button></div>
+          <div> <button color="primary"
+                    class="u-color-text-white"
+                    (click)='updatePin(5)'
+                    mat-fab>5</button></div>
+          <div> <button color="primary"
+                    class="u-color-text-white"
+                    (click)='updatePin(6)'
+                    mat-fab>6</button></div>
+        </div>
+        <div fxLayout="row wrap"
+             fxLayoutGap="8px">
+          <div> <button color="primary"
+                    class="u-color-text-white"
+                    (click)='updatePin(7)'
+                    mat-fab>7</button></div>
+          <div> <button color="primary"
+                    class="u-color-text-white"
+                    (click)='updatePin(8)'
+                    mat-fab>8</button></div>
+          <div> <button color="primary"
+                    class="u-color-text-white"
+                    (click)='updatePin(9)'
+                    mat-fab>9</button></div>
+        </div>
+        <div fxLayout="row wrap"
+             fxLayoutGap="8px">
+          <div> <button color="primary"
+                    class="custom-fab"
+                    mat-fab></button></div>
+          <div> <button color="primary"
+                    class="u-color-text-white"
+                    (click)='updatePin(0)'
+                    mat-fab>0</button></div>
+          <div>
+            <button mat-fab
+                    (click)='deletePin()'
+                    class="custom-fab">
+              <mat-icon class="u-icon-backspace">backspace</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div fxLayout="row wrap"
+           fxLayoutALign="center center"
+           fxLayoutGap="5px"
+           fxLayout.xs="column"
+           class="u-margin-top-5">
+
+        <button mat-raised-button
+                class="custom-button"
+                (click)="openActionsDialog()">OK</button>
+
+      </div>
+    </div>
+  </div>
+</div>

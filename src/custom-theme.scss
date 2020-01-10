@@ -1,0 +1,111 @@
+@import "~@angular/material/theming";
+// @import url("https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister&display=swap");
+// @import "../../../../node_modules/@angular/material/_theming.scss";
+// Plus imports for other components in your app.
+$custom-typography: mat-typography-config(
+  $font-family: "Bubblegum Sans"
+);
+@include angular-material-typography($custom-typography);
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+$md-mcgpalette0: (
+  50: #fbe9e6,
+  100: #f4c7c0,
+  200: #eda296,
+  300: #e67d6b,
+  400: #e0614c,
+  500: #db452c,
+  600: #d73e27,
+  700: #d23621,
+  800: #cd2e1b,
+  900: #c41f10,
+  A100: #b8d0db,
+  A200: #5b727b,
+  A400: #314750,
+  A700: #092028,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$md-mcgpaletteaccent: (
+  50: #fdf8e6,
+  100: #fbedc2,
+  200: #f8e199,
+  300: #f5d470,
+  400: #f3cb51,
+  500: #f1c232,
+  600: #efbc2d,
+  700: #edb426,
+  800: #ebac1f,
+  900: #e79f13,
+  A100: #ffffff,
+  A200: #fff4e2,
+  A400: #ffe2af,
+  A700: #ffd896,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$design-atm-assignment-primary: mat-palette($md-mcgpalette0);
+$design-atm-assignment-accent: mat-palette($md-mcgpaletteaccent);
+
+// The warn palette is optional (defaults to red).
+$design-atm-assignment-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$design-atm-assignment-theme: mat-light-theme(
+  $design-atm-assignment-primary,
+  $design-atm-assignment-accent,
+  $design-atm-assignment-warn
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and pinclude the theme mixins for each component
+// that you are using.
+@include angular-material-theme($design-atm-assignment-theme);
+
+$design-atm-assignment-primary-dark: mat-palette($md-mcgpaletteaccent);
+$design-atm-assignment-accent-dark: mat-palette($md-mcgpalette0);
+
+$design-atm-assignment-theme-dark: mat-dark-theme(
+  $design-atm-assignment-primary-dark,
+  $design-atm-assignment-accent-dark
+);
+.alternative {
+  @include angular-material-theme($design-atm-assignment-theme-dark);
+}
